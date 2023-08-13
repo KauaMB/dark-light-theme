@@ -1,0 +1,27 @@
+.dark-body {
+  background-color: #1d1d1d;
+  color: #fff;
+}
+
+.dark-page-author {
+  color: #fff;
+  border-color: #fff;
+}
+
+.dark-page-author:hover {
+  background-color: #ffffff2f;
+}
+
+.dark-author-name {
+  color: #ebebeb;
+}
+
+.dark-header {
+  background-color: #131212;
+  color: #fff;
+}
+
+.dark-header.page-author {
+  color: #fff;
+  border-color: #fff;
+}

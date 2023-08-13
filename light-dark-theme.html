@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="styles/general.css">
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/dark-mode.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Passion+One:wght@400;700&family=Ubuntu:wght@400;700&display=swap"
+    rel="stylesheet">
+  <title>Light/Dark theme</title>
+
+</head>
+
+<body>
+
+  <header class="fixed-header">
+
+    <a href="https://github.com/KauaMB" target="_blank">
+      <p class="page-author">KauaMB</p>
+    </a>
+
+    <button class="theme-button">CHANGE THEME</button>
+
+  </header>
+
+
+  <div class="text-image">
+
+
+    <div class="text-information">
+
+      <p class="page">RECIPES</p>
+
+      <p class="title sussy-baka">An easy vanilla cake recipe</p>
+
+      <p class="description">This vanilla cake recipe is so easy to make,
+        feel free to go big on the decoration.
+        A simple dusting of icing sugar
+        or edible flowers are our go-to options
+      </p>
+
+      <p class="author">By <a class="author-name" target="_blank" href="https://blanchevaughan.com">Blanche
+          Vaughan</a>
+      </p>
+      <p class="date">8 June 2023</p>
+
+      <button class="show-recipe-btn">
+        Show recipe
+      </button>
+
+    </div>
+
+    <div class="image-info">
+
+      <!-- <hr>
+
+      <div class="above-image-flex">
+        <p class="info-above-image">
+          PREPARATION TIME <span class="preparation-time">10 MINS</span>
+        </p>
+        <p class="info-above-image">
+          COOKING TIME <span class="preparation-time">50 MINS</span>
+        </p>
+      </div>
+
+      <img class="image" src="images/cake.webp" alt="the image of a cake"> -->
+
+    </div>
+
+  </div>
+
+</body>
+
+<script>
+  const bodyElement = document.querySelector('body');
+  const jsHeader = document.querySelector('.fixed-header')
+  const pageAuthor = document.querySelector('.page-author')
+  const authorName = document.querySelector('.author-name')
+
+  const imgInfo = document.querySelector('.image-info')
+
+  document.querySelector('.theme-button').addEventListener('click', changeTheme);
+  document.querySelector('.show-recipe-btn').addEventListener('click', showRecipe)
+
+  function changeTheme() {
+    if (bodyElement.classList.contains('dark-body')) {
+      bodyElement.classList.remove('dark-body')
+      jsHeader.classList.remove('dark-header')
+      pageAuthor.classList.remove('dark-page-author')
+      authorName.classList.remove('dark-author-name')
+    }
+    else {
+      bodyElement.classList.add('dark-body')
+      jsHeader.classList.add('dark-header')
+      pageAuthor.classList.add('dark-page-author')
+      authorName.classList.add('dark-author-name')
+    }
+  }
+
+  function showRecipe() {
+    imgInfo.innerHTML = `
+    <div class="image-animation">
+      <hr>
+      <div class="above-image-flex">
+        <p class="info-above-image">
+          PREPARATION TIME <span class="preparation-time">10 MINS</span>
+        </p>
+        <p class="info-above-image">
+          COOKING TIME <span class="preparation-time">50 MINS</span>
+        </p>
+      </div>
+
+      <img class="image" src="images/cake.webp" alt="the image of a cake">
+     </div> 
+    `
+
+    document.querySelector('.show-recipe-btn').remove();
+  }
+
+</script>
+
+</html>
